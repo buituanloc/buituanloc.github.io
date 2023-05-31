@@ -1,0 +1,43 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.card {
+    width: 450px;
+    margin: auto;
+    height: 410px;
+    border-radius: 5px;
+    box-shadow: 5px 5px;
+}
+
+.time {
+    text-align: center;
+    color: #fff;
+}
+
+.year {
+    background-color: #ef5320;
+    padding: 2px 0;
+}
+
+.date {
+    background-color: #fe6d40;
+    padding: 32px 0px;
+}
+
+.date h2 {
+    font-size: 50px;
+    font-weight: 500px;
+}
+
+.time p {
+    font-weight: 300;
+}
