@@ -4,24 +4,24 @@
         box-sizing: border-box;
         font-family: "Roboto", sans-serif;
     }
-    
+
     .container {
         width: 1320px;
         margin: auto;
     }
-    
+
     .row {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         align-content: space-evenly;
     }
-    
+
     .card-item {
         flex-basis: 25%;
         padding: 15px;
     }
-    
+
     .card {
         border: 1px solid grey;
         margin-bottom: 30px;
@@ -31,36 +31,36 @@
         border-radius: 5px;
         justify-content: center;
     }
-    
+
     img {
         width: 320px;
         height: 230px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
-    
-    i {
+
+    .fa-star {
         color: #ffd600;
     }
-    
+
     .course-info {
         display: flex;
         flex-direction: column;
         padding: 5px 15px 0px;
         width: 310px;
     }
-    
+
     .course-title {
         font-size: 21px;
         margin-bottom: 20px;
     }
-    
+
     .course-description {
         display: flex;
         color: grey;
         justify-content: space-between;
     }
-    
+
     footer {
         background-color: #30598c;
         color: white;
@@ -69,37 +69,37 @@
         font-size: 15px;
         font-weight: 400;
     }
-    
+
     a {
         text-decoration: none;
         color: white;
     }
-    
+
     ul {
         list-style: none;
     }
-    
+
     .social-links {
         display: flex;
     }
-    
+
     li {
         padding: 10px;
     }
-    
+
     h3 {
         padding: 10px;
     }
-    
+
     .fab {
         cursor: pointer;
         color: white;
     }
-    
+
     .fab:hover {
         color: #ffd600;
     }
-    
+
     header {
         display: flex;
         background-color: #30598c;
@@ -111,38 +111,38 @@
         padding: 15px;
         height: 60px;
     }
-    
+
     .content-header {
         display: flex;
         align-items: center;
     }
-    
+
     .nav__menu {
         display: flex;
         margin-left: 490px;
         font-size: 17px;
         align-items: center;
     }
-    
+
     .container-header {
         height: 60px;
     }
-    
-    i {
-        color: white;
-        margin-left: 5px;
-    }
-    
+
     .nav-padding {
         margin-left: 20px;
         text-transform: uppercase;
     }
-    
+
     .badge {
         background-color: #26a69a;
     }
-    
+
     .header-user {
         cursor: pointer;
         position: relative;
+    }
+
+    .fa-caret-down {
+        color: white;
+        margin-left: 5px;
     }
