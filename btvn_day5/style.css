@@ -114,17 +114,14 @@
     
     .content-header {
         display: flex;
+        align-items: center;
     }
     
     .nav__menu {
         display: flex;
-        margin-left: 600px;
+        margin-left: 520px;
         font-size: 17px;
-    }
-    
-    .logo {
-        width: 30px;
-        height: 50px;
+        align-items: center;
     }
     
     .container-header {
@@ -133,4 +130,9 @@
     
     i {
         color: white;
+        margin-left: 5px;
+    }
+    
+    .nav-padding {
+        margin-left: 15px;
     }
