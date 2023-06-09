@@ -81,9 +81,10 @@
 
             .container:hover img {
                 height: 200px;
+                object-fit: cover;
             }
 
-            .container:hover .btn1 {
+            ob .container:hover .btn1 {
                 position: absolute;
                 top: 160px;
                 right: 250px;
