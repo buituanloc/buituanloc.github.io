@@ -81,8 +81,6 @@
 
             .container:hover img {
                 height: 200px;
-                background-color: Black;
-                z-index: 10;
             }
 
             .container:hover .btn1 {
