@@ -11,42 +11,51 @@
     />
     <!-- FontAwesome CSS -->
     <style type="text/css">
+        .container {
+            width: 360px;
+            height: 400px;
+            border: 1px solid grey;
+            background-color: gray;
+        }
+        
         .card {
             width: 300px;
             background-color: white;
             border-radius: 10px;
+            border: 1px solid grey;
+            margin: auto;
+            margin-top: 25px;
         }
-
+        
         .card img {
             width: 100%;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
-
+        
         .card_body {
             padding: 20px;
         }
-
+        
         .card_body h3 {
             font-weight: bold;
             color: rgb(92, 91, 91);
             text-align: left;
             margin: 0px;
         }
-
+        
         .card_body h5 {
             margin: 0px;
             font-size: 20px;
         }
-
+        
         .price_box {
             color: orange;
         }
-
-        body {
+        /* body {
             background-color: gray;
-        }
-
+        } */
+        
         .right_text {
             text-align: right;
         }
@@ -54,28 +63,30 @@
 </head>
 
 <body>
-    <div class="card">
-        <!-- image -->
-        <div>
-            <img src="react-native.png">
-        </div>
-        <!-- text -->
-        <div class="card_body">
-            <h3>Lập trình di động đa nền tảng React Native cập nhật 2021</h3>
+    <div class="container">
+        <div class="card">
+            <!-- image -->
             <div>
-                <div style="width:50%; float:left">
-                    <p style="color: grey;"> Phòng lab, 14 buổi</p>
-                </div>
-                <div style="width: 50%; float:right">
-                    <p class="right_text">4.7
-                        <i class="fa-solid fa-star" style="color:yellow; font-size: 40px"></i>
-                    </p>
-                </div>
-
+                <img src="react-native.png">
             </div>
-            <h5 class="price_box">
-                3,900,000đ
-            </h5>
+            <!-- text -->
+            <div class="card_body">
+                <h3>Lập trình di động đa nền tảng React Native cập nhật 2021</h3>
+                <div>
+                    <div style="width:50%; float:left">
+                        <p style="color: grey;"> Phòng lab, 14 buổi</p>
+                    </div>
+                    <div style="width: 50%; float:right">
+                        <p class="right_text">4.7
+                            <i class="fa-solid fa-star" style="color:yellow; font-size: 20px"></i>
+                        </p>
+                    </div>
+
+                </div>
+                <h5 class="price_box">
+                    3,900,000đ
+                </h5>
+            </div>
         </div>
     </div>
 </body>
