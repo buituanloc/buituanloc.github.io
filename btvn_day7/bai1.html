@@ -7,41 +7,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .hinh_trai_tim:before,
-        .hinh_trai_tim:after {
-            content: "";
-            width: 70px;
-            height: 115px;
-            position: absolute;
-            background: white;
-            left: 70px;
-            top: 0;
-            border-radius: 50px 50px 0 0;
-            transform: rotate(-45deg);
-            transform-origin: 0 100%;
-        }
-
-        .hinh_trai_tim:after {
-            left: 0;
-            transform: rotate(45deg);
-            transform-origin: 100% 100%;
+        i {
+            color: white;
+            margin-left: 140px;
+            margin-top: 150px;
+            font-size: 300px;
+            animation: heart 1s ease-in-out infinite
         }
 
         @keyframes heart {
             96% {
-                transform: translate(-50%, -50%) scale(.8, .8)
+                transform: scale(.8, .8)
             }
             100% {
-                transform: translate(-50%, -50%) scale(1, 1)
+                transform: scale(1, 1)
             }
         }
     </style>
 </head>
 
 <body>
-    <div style="width: 600px; height: 600px; background-color: #FA8072;">
-        <div class="hinh_trai_tim" style="transform: translate(-50%,-50%);
-        animation: heart 1s ease infinite"></div>
+    <div style="width: 600px; height: 600px; background-color: #FA8072; margin-left: 400px; margin-top: 60px;">
+        <i class="fa-sharp fa-solid fa-heart"></i>
     </div>
 </body>
 
