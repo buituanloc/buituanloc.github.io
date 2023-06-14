@@ -26,14 +26,15 @@
         border: 1px solid grey;
         margin-bottom: 30px;
         width: 320px;
-        height: 355px;
+        height: 360px;
         box-sizing: border-box;
         border-radius: 5px;
         justify-content: center;
+        box-shadow: 1px 1px 1px 1px grey;
     }
 
     img {
-        width: 320px;
+        width: 319.1px;
         height: 230px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -53,6 +54,7 @@
     .course-title {
         font-size: 21px;
         margin-bottom: 20px;
+        margin-top: 10px;
     }
 
     .course-description {
@@ -61,12 +63,15 @@
         justify-content: space-between;
     }
 
+    .row-footer {
+        display: flex;
+    }
+
     footer {
         background-color: #30598c;
         color: white;
-        padding: 40px;
         height: 400px;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 400;
     }
 
@@ -97,7 +102,11 @@
     }
 
     .fab:hover {
-        color: #ffd600;
+        color: grey;
+    }
+
+    footer a:hover {
+        color: grey;
     }
 
     header {
