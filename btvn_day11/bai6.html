@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bài 6
+        //vòng lặp for
+        function calculateSumPrimeNumber_For(startNum, endNum) {
+            let sum = 0;
+            for (let num = startNum; num <= endNum; num++) {
+                if (isPrime_For(num) == true) {
+                    sum += num;
+                }
+            }
+            return sum;
+        }
+        console.log(calculateSumPrimeNumber_For(2, 10));
+
+        //vòng lặp while
+        function calculateSumPrimeNumber_While(startNum, endNum) {
+            let sum = 0;
+            let num = startNum;
+            while (num <= endNum) {
+                if (isPrime_For(num) == true) {
+                    sum += num;
+                }
+                num++;
+            }
+            return sum;
+        }
+        console.log(calculateSumPrimeNumber_While(2, 10));
+    </script>
+</body>
+
+</html>

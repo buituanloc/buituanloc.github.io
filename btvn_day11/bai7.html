@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bài 7
+        //vòng lặp for
+        function sumDivide_For(num) {
+            let sum = 0;
+            if (num > 0) {
+                for (let i = 0; i <= num; i++) {
+                    if (num % i === 0) {
+                        sum += i;
+                    }
+                }
+            } else {
+                console.log('Số truyền vào không hợp lệ');
+            }
+            return sum;
+        }
+        console.log(sumDivide_For(6));
+
+        //vòng lặp while
+        function sumDivide_While(num) {
+            let sum = 0;
+            let i = 0;
+            while (i <= num) {
+                if (num % i === 0) {
+                    sum += i;
+                }
+                i++;
+            }
+            return sum
+        }
+        console.log(sumDivide_While(6));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bài 5
+        //vòng lặp for
+        function isPrime_For(num) {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        };
+        console.log(isPrime_For(2));
+
+        //vòng lặp while
+        function isPrime_While(num) {
+            let ok = true;
+            let i = 2;
+            while (i <= num - 1) {
+                if (num % i === 0) {
+                    ok = false;
+                    break;
+                }
+                i++
+            }
+            return ok;
+        }
+        console.log(isPrime_While(2));
+    </script>
+</body>
+
+</html>
