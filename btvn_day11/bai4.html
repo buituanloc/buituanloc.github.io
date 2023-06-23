@@ -12,8 +12,25 @@
         // Bài 4
         // vòng lặp for
         function Bai4_For(startNum, endNum) {
-            return (endNum - startNum + 1) * (startNum + endNum) / 2;
+            let sum = 0;
+            for (i = startNum + 1; i < endNum; i++) {
+                sum += i;
+            }
+            return sum;
         };
+        console.log(Bai4_For(3, 10));
+
+        //vòng lặp while
+        function Bai4_While(startNum, endNum) {
+            let sum = 0;
+            let i = startNum + 1;
+            while (i < endNum) {
+                sum += i;
+                i++;
+            }
+            return sum;
+        }
+        console.log(Bai4_While(3, 8));
     </script>
 </body>
 
