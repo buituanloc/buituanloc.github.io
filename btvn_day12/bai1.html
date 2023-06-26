@@ -9,8 +9,32 @@
 
 <body>
     <script>
-        var string = "Chào mừng bạn đến với freetuts.net";
-        document.write("Vị trí xuất hiện chuỗi freetuts.net là: " + string.indexOf("freetuts.net"));
+        function subString(string, n) {
+            for (let i = 0; i <= string.length - n; i++) {
+                let sub_str = "";
+                for (let j = i; j <= i + n - 1; j++) {
+                    sub_str = sub_str + string[j];
+                }
+            }
+        }
+
+        function checkStringExist(string, sub_string) {
+            let ans = true;
+            for (let i = 0; i <= string.length - sub_string.length; i++) {
+                let sub_str = "";
+                for (let j = i; j <= i + sub_string.length - 1; j++) {
+                    sub_str += string[j];
+                }
+                console.log(sub_str);
+                if (sub_str === sub_string) {
+                    ans = true;
+                    break;
+                }
+            }
+            return ans
+
+        }
+        console.log(checkStringExist("I Love You", "You"))
     </script>
 </body>
 
