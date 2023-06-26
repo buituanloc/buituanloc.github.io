@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function shortenString(string, num_character, appendString) {
+            let newString = "";
+            if (string.length > 8) {
+                for (let i = 0; i <= num_character; i++) {
+                    newString += string[i];
+                }
+                newString += appendString;
+                return newString;
+            } else {
+                return string;
+            }
+        }
+        console.log(shortenString("BùiHoà", 7, "..."));
+    </script>
+</body>
+
+</html>
