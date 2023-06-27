@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isSymmetricString(string) {
+            let str = string.toLowerCase().split(" ").join("");
+            let strReverse = str.split("").reverse().join("");
+            return str === strReverse
+        }
+        console.log(isSymmetricString("Race car"));
+        console.log(isSymmetricString("hello world"));
+    </script>
+</body>
+
+</html>

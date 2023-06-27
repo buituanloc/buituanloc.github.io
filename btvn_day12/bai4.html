@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getMinNumber(number) {
+            let str = number.toString();
+            let arr = str.split("").sort();
+            if (arr[0] === '0') {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] !== '0') {
+                        // Đổi vị trí arr[0] và arr[i]
+                        arr[0] = arr[i];
+                        arr[i] = '0'
+                        break;
+                    }
+                }
+            }
+            return Number(arr.join(""))
+        }
+        console.log(getMinNumber(53751));
+        console.log(getMinNumber(14350));
+        console.log(getMinNumber(203950));
+    </script>
+</body>
+
+</html>
