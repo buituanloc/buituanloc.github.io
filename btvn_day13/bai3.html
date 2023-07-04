@@ -9,16 +9,23 @@
 
 <body>
     <script>
-        let numbers = [4, 2, 5, 6, 2, 7];
-        let newArr = [];
-        for (let i = 0; i < numbers.length; i++) {
-            if (numbers[i] % 2 == 0) {
-                newArr[i] = 0;
-            } else {
-                newArr[i] = 1;
-            }
+        //cách 1
+        // let numbers = [4, 2, 5, 6, 2, 7];
+        // let newArr = [];
+        // for (let i = 0; i < numbers.length; i++) {
+        //     if (numbers[i] % 2 == 0) {
+        //         newArr[i] = 0;
+        //     } else {
+        //         newArr[i] = 1;
+        //     }
+        // }
+        // console.log(newArr);
+
+        //cách 2
+        function modulo2(arr) {
+            return arr.map((e) => e % 2);
         }
-        console.log(newArr);
+        console.log(modulo2([4, 2, 5, 6, 2, 7]));
     </script>
 </body>
 
