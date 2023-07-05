@@ -9,13 +9,11 @@
 
 <body>
     <script>
+        //B1:Khởi tạo và đặt tên hàm
+        //B2:Ta dùng phương thức arr.filter để lọc ra các chuỗi có độ dài lớn nhất trong mảng
         function getStringHasMaxLength(arr) {
             let maxLength = 0;
-            return arr.filter((e) => {
-                if (e.length > maxLength) {
-                    e.length = maxLength;
-                }
-            })
+            return arr.filter((e) => e.length > 2)
         }
         console.log(getStringHasMaxLength(['aba', 'aa', 'ad', 'c', 'vcd']));
     </script>
