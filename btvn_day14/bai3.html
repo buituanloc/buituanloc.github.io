@@ -9,15 +9,22 @@
 
 <body>
     <script>
-        const arr1 = [1, 2, 3, 4, 5, 6, 7];
-        const arr2 = [3, 4, 5, 6, 6];
-        const newArr = [];
-        arr1.forEach((item) => {
-            if (arr2.indexOf(item) == -1) {
-                newArr.push(item);
-            }
-        })
-        console.log("newArrr", newArr);
+        //cách 1
+        // const arr1 = [1, 2, 3, 4, 5, 6, 7];
+        // const arr2 = [3, 4, 5, 6, 6];
+        // const newArr = [];
+        // arr1.forEach((item) => {
+        //     if (arr2.indexOf(item) == -1) {
+        //         newArr.push(item);
+        //     }
+        // })
+        // console.log("newArrr", newArr);
+
+        //cách 2
+        function bai2(arr1, arr2) {
+            return arr2.filter(x => !arr1.includes(x)).concat(arr1.filter(x => !arr2.includes(x)));
+        }
+        console.log(bai2([1, 2, 3, 4, 5, 6, 7], [3, 4, 5, 6, 6]));
     </script>
 </body>
 

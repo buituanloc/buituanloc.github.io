@@ -9,14 +9,23 @@
 
 <body>
     <script>
-        function randomArr(arr) {
-            for (i = arr.length - 1; i >= 0; i--) {
-                j = Math.floor(Math.random() * arr.length);
-                [arr[i], arr[j] = [arr[j], arr[i]]];
-            }
-            return arr;
+        //cách 1
+        // function randomArr(arr) {
+        //     for (i = arr.length - 1; i >= 0; i--) {
+        //         j = Math.floor(Math.random() * arr.length);
+        //         [arr[i], arr[j] = [arr[j], arr[i]]];
+        //     }
+        //     return arr;
+        // }
+        // console.log(randomArr([1, 2, 3, 4, 5]));
+
+        //cách 2
+        shuffleArray = (arr) => {
+            let new_arr = []
+            while (arr.length > 0) new_arr.push(...arr.splice(Math.floor(Math.random() * (arr.length - 1)), 1))
+            return new_arr
         }
-        console.log(randomArr([1, 2, 3, 4, 5]));
+        console.log(shuffleArray([5, 4, 1, 2, 4]))
     </script>
 </body>
 
