@@ -32,24 +32,17 @@ const showInfo = arr => {
 }
 showInfo(products);
 
-//Bài 2
-const sumProduct = (arr) => {
-    return arr.map(p => p.price * p.count);
-}
-console.log(arr)
-
 //Bài 3
 const findByBrand = (arr, brand) => {
     return arr.filter(p => p.brand === brand);
 }
 console.log(findByBrand(products, "Apple"));
 
-
 //Bài 4
-// const findbyPrice = (arr) => {
-//     return arr.filter(p => p.price > 20000000)
-// }
-// console.log(findbyPrice(products));
+const findByPrice = (arr) => {
+    return arr.filter(p => p.price > 20000000)
+}
+console.log(findByPrice(products));
 
 //Bài 5
 const findByName = (arr, keyword) => {
@@ -57,10 +50,6 @@ const findByName = (arr, keyword) => {
 }
 console.log(findByName(products, "pRo"));
 
-//Bài 6
-const addProduct = (arr) => {
-    return arr.
-}
 
 //Bài 8
 const sortByPrice = (arr) => {
@@ -70,6 +59,7 @@ console.log(sortByPrice(products))
 
 //Bài 9
 const sortByCount = (arr) => {
-    return arr.sort((p1, p2) => p2.count - p1.count)
+    arrCopy = arr.slice();
+    return arrCopy.sort((p1, p2) => p2.count - p1.count)
 }
 console.log(sortByCount(products))
