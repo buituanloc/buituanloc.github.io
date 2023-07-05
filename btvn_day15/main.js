@@ -50,6 +50,17 @@ const findByName = (arr, keyword) => {
 }
 console.log(findByName(products, "pRo"));
 
+//Bài 6
+products.push({
+    name: "Iphone 14 Pro Max",
+    price: 42990000,
+    brand: "Apple",
+    count: 3,
+})
+console.log(products);
+
+//Bài 7
+
 
 //Bài 8
 const sortByPrice = (arr) => {
