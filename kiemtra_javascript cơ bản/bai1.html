@@ -10,7 +10,8 @@
 <body>
     <script>
         //B1:khởi tạo và đặt tên hàm
-        //B2:ta dùng phương sort để sắp xếp các phần tử trong mảng theo chiều giảm dần,phần tử thứ 2 chính là phần tử lớn thứ 2 trong mảng
+        //B2:tạo một mảng mới là unique_arr và khởi tạo một Obj là Set để lưu trữ các giá trị trong mảng arr mà không bị trùng lặp
+        //B3:ta dùng phương sort để sắp xếp các phần tử trong mảng unique_arr theo chiều giảm dần,phần tử thứ 2 chính là phần tử lớn thứ 2 trong mảng
         function max2Numbers(arr) {
             let unique_arr = [...new Set(arr)]
             unique_arr.sort((a, b) => b - a)
