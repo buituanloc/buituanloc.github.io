@@ -9,13 +9,14 @@
 
 <body>
     <script>
+        //Bài này em chưa hoàn thiện
         function getCountElement(arr, string) {
             let count = 0;
             for (let i = 0; i < arr.length; i++) {
                 if (arr[i] == string)
                     count++;
             }
-            console.log({});
+            console.log(string + ":" + count);
         }
 
         console.log(getCountElement(["one", "two", "three", "one", "one", "three"]));
