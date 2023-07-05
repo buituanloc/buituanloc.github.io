@@ -10,10 +10,13 @@
 <body>
     <script>
         //B1:Khởi tạo và đặt tên hàm
-        //B2:Ta dùng phương thức arr.filter để lọc ra các chuỗi có độ dài lớn nhất trong mảng
+        //B2:Tạo một mảng mới và gán cho giá trị bằng mảng đã được sắp xếp theo thứ tự giảm dần
+        //B3:Tạo biến maxLength và gán bằng giá trị độ dài phần tử đầu tiên của mảng mới bên trên
+        //B4:Ta dùng phương thức arr.filter để lọc ra các chuỗi có độ dài lớn nhất trong mảng
         function getStringHasMaxLength(arr) {
-            let maxLength = 0;
-            return arr.filter((e) => e.length > 2)
+            let newArr = arr.sort((a, b) => b.length - a.length);
+            let maxLength = newArr[0].length;
+            return arr.filter((e) => e.length === maxLength)
         }
         console.log(getStringHasMaxLength(['aba', 'aa', 'ad', 'c', 'vcd']));
     </script>
