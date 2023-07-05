@@ -9,14 +9,21 @@
 
 <body>
     <script>
-        function bai4(string, n) {
-            let newString = "";
-            for (let i = 0; i <= n; i++) {
-                newString = newString + `${string}-`;
-            }
-            return newString;
+        //cách 1
+        // function bai4(string, n) {
+        //     let newString = "";
+        //     for (let i = 0; i <= n; i++) {
+        //         newString = newString + `${string}-`;
+        //     }
+        //     return newString;
+        // }
+        // console.log(bai4('a', 9))
+
+        //cách 2
+        repeatString = (string, numRepeat, joinChar) => {
+            return Array(numRepeat).fill(string).join(joinChar)
         }
-        console.log(bai4('a', 9))
+        console.log(repeatString("a", 10, "-"));
     </script>
 </body>
 
