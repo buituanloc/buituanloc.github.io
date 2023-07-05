@@ -9,14 +9,9 @@
 
 <body>
     <script>
-        //Bài này em chưa hoàn thiện
         function similarity(arr1, arr2) {
-            let newArr = [];
-            arr1.forEach(e => {
-                if (arr2.indexOf(e) >= 0 && newArr.indexOf(e) == -1) {
-                    newArr.push(e);
-                }
-            })
+            return arr2.filter(x => arr1.includes(x));
+            //Dùng phương thức arr2.filter để lọc trong mảng arr2,arr1.includes là kiểm tra những phần tử ở mảng 1 tồn tại trong mảng 2
         }
         console.log(similarity([1, 2, 3], [1, 2, 4]));
     </script>
