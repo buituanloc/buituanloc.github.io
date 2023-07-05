@@ -11,7 +11,11 @@
     <script>
         function getStringHasMaxLength(arr) {
             let maxLength = 0;
-            return arr.filter((e) => e.length > maxLength ? e.length : 0)
+            return arr.filter((e) => {
+                if (e.length > maxLength) {
+                    e.length = maxLength;
+                }
+            })
         }
         console.log(getStringHasMaxLength(['aba', 'aa', 'ad', 'c', 'vcd']));
     </script>
