@@ -20,11 +20,11 @@
     <script>
         //1
         const ul = document.querySelector("#list");
-        const li8 = document.createElement('li');
+        const li8 = document.createElement("li");
         li8.textContent = "Item 8";
-        const li9 = document.createElement('li');
+        const li9 = document.createElement("li");
         li9.textContent = "Item 9";
-        const li10 = document.createElement('li');
+        const li10 = document.createElement("li");
         li10.textContent = "Item 10";
         ul.insertAdjacentElement('beforeend', li8);
         ul.insertAdjacentElement('beforeend', li9);
@@ -47,6 +47,13 @@
         const li5 = document.querySelector("ul li:nth-child(4)")
         li.textContent = "Item 4"
         ul.insertBefore(li, li5)
+
+        //Bài 1_day2
+        ul.insertAdjacentHTML("afterend", "<button>Add</button>")
+        ul.insertAdjacentHTML("afterend", "<input>")
+        btn.addEventListener("click", function() {
+            ul.insertAdjacentHTML("beforeend", "<li></li")
+        })
     </script>
 </body>
 
