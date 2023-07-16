@@ -39,7 +39,14 @@ const productList = [{
         rating: 5
     }
 ]
-const formatPrice = price => { return price.toString().replace() }
+
+// "10000".replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") # => "10,000"
+// Format tiền theo định dạng VND
+const formatPrice = price => {
+    return price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " VND"
+}
+
+// Hiển thị ds product
 const productEl = document.querySelector(".mt-5 .container .product-list");
 let html = "";
 productList.forEach(p => {
@@ -60,7 +67,7 @@ productList.forEach(p => {
                 </p>
             </div>
             <p class="price text-danger fs-5">
-                ${p.price}
+                ${formatPrice(p.price)}
             </p>
         </div>
     </div>

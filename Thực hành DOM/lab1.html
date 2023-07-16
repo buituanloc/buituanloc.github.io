@@ -36,6 +36,11 @@
         console.log(a);
 
         //3
+        const wordCount = document.createElement("div");
+        const word1 = p.textContent.split(" ");
+        const text = word1.filter(p => p.toUpperCase() !== p.toLowerCase());
+        wordCount.textContent = `Số từ trong đoạn văn là ${text.length}`;
+        body.appendChild(wordCount);
 
         //4
         p.innerHTML = p.innerHTML.replaceAll(',', '🤔').replaceAll('.', '🤔');
