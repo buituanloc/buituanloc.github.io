@@ -49,10 +49,18 @@
         ul.insertBefore(li, li5)
 
         //Bài 1_day2
-        ul.insertAdjacentHTML("afterend", "<button>Add</button>")
-        ul.insertAdjacentHTML("afterend", "<input>")
+        const btn = document.createElement("button")
+        btn.innerText = "Add";
+        const input = document.createElement("input")
+        input.type = "text";
+        input.id = "domain";
+        input.name = "domain";
+        ul.insertAdjacentElement("afterend", btn)
+        ul.insertAdjacentElement("afterend", input);
+        const li_n = document.createElement("li")
         btn.addEventListener("click", function() {
-            ul.insertAdjacentHTML("beforeend", "<li></li")
+            ul.insertAdjacentElement("beforeend", li_n)
+            li_n.textContent = document.getElementById("domain").value;
         })
     </script>
 </body>
