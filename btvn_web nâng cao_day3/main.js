@@ -24,24 +24,45 @@ const authorList = [{
     }
 ]
 
-const authorEl = document.querySelector(".testimonials-container");
-let html = "";
-authorList.forEach(a => {
-    html += `<div class="testimonials-container" style="background-color: ${a.color};">
-    <i class="fas fa-quote-left"></i>
+const testimonialsContainerEl = document.querySelector('.testimonials-container');
+const nameEl = document.querySelector(".name");
+const textEl = document.querySelector(".text");
+const authorsContainerEl = document.querySelector(".authors-container");
 
-    <!-- Nội dung quote hiển thị ở đây -->
-    <p class="text">${a.quote}</p>
+const renderAuthorImage = arr => {
+    let html = "";
+    arr.forEach(e => {
+        html += `
+            <div class="author">
+                <img src="${e.image}" alt="${e.name}">
+            </div>
+        `
+    });
+    authorsContainerEl.innerHTML = html;
 
-    <!-- Tên tác giả hiển thị ở đây -->
-    <strong class="name">${a.name}</strong>
+    const authorEls = document.querySelectorAll(".author");
+    authorEls.forEach((e, i) => {
+        e.addEventListener("click", () => {
+            activeAuthor(arr, i);
+        })
+    })
+}
 
-    <div class="authors-container">
-        <div class="author selected"><img src="https://randomuser.me/api/portraits/men/41.jpg" alt=""></div>
-        <div class="author"><img src="https://randomuser.me/api/portraits/women/50.jpg" alt=""></div>
-        <div class="author"><img src="https://randomuser.me/api/portraits/women/22.jpg" alt=""></div>
-        <div class="author"><img src="https://randomuser.me/api/portraits/women/76.jpg" alt=""></div>
-        <div class="author"><img src="https://randomuser.me/api/portraits/men/17.jpg" alt=""></div>
-    </div>
-</div>`
-})
+const activeAuthor = (arr, index) => {
+    // Active user (avatar to lên -> thêm "selected")
+    const preSelectedEl = document.querySelector(".selected");
+    if (preSelectedEl) {
+        preSelectedEl.classList.remove("selected");
+    }
+    const currentEl = document.querySelector(`.author:nth-child(${index + 1})`);
+    currentEl.classList.add("selected");
+
+    // Hiển thị các thông tin liên quan (quote, name, color)
+    const authorInfo = arr[index];
+    nameEl.innerHTML = authorInfo.name;
+    textEl.innerHTML = authorInfo.quote;
+    testimonialsContainerEl.style.backgroundColor = authorInfo.color;
+}
+
+renderAuthorImage(authorList);
+activeAuthor(authorList, 0)
