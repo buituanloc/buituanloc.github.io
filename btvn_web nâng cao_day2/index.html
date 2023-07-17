@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <ul id="list" style="display: block;">
+    <ul id="list">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
@@ -58,11 +58,12 @@
         ul.insertAdjacentElement("afterend", btn1);
         ul.insertAdjacentElement("afterend", btn)
         ul.insertAdjacentElement("afterend", input);
-        const li_n = document.createElement("li")
+
         btn.addEventListener("click", function() {
             if (document.getElementById("domain").value == "") {
                 alert("Nội dung không được để trống")
             } else {
+                const li_n = document.createElement("li");
                 ul.insertAdjacentElement("beforeend", li_n);
                 li_n.textContent = document.getElementById("domain").value;
                 document.getElementById("domain").value = "";
@@ -80,12 +81,12 @@
         hide.innerText = "Hide";
         ul.insertAdjacentElement("beforebegin", hide);
         hide.addEventListener("click", function() {
-            if (ul.style.display = "block") {
-                ul.style.display = "none";
-                hide.innerText = "Show";
-            } else {
+            if (ul.style.display = "") {
                 ul.style.display = "block";
                 hide.innerText = "Hide";
+            } else {
+                ul.style.display = "none";
+                hide.innerText = "Show";
             }
         })
     </script>
