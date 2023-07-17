@@ -82,12 +82,12 @@
         hide.style.marginRight = "10px"
         ul.insertAdjacentElement("beforebegin", hide);
         hide.addEventListener("click", function() {
-            if (ul.style.display = "") {
-                ul.style.display = "block";
-                hide.innerText = "Hide";
-            } else {
+            if (ul.innerText = "Hide") {
                 ul.style.display = "none";
                 hide.innerText = "Show";
+            } else {
+                hide.innerText = "Hide";
+                ul.style.display = "block";
             }
         })
     </script>
