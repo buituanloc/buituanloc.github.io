@@ -23,3 +23,25 @@ const authorList = [{
         color: "#F24C3D"
     }
 ]
+
+const authorEl = document.querySelector(".testimonials-container");
+let html = "";
+authorList.forEach(a => {
+    html += `<div class="testimonials-container" style="background-color: ${a.color};">
+    <i class="fas fa-quote-left"></i>
+
+    <!-- Nội dung quote hiển thị ở đây -->
+    <p class="text">${a.quote}</p>
+
+    <!-- Tên tác giả hiển thị ở đây -->
+    <strong class="name">${a.name}</strong>
+
+    <div class="authors-container">
+        <div class="author selected"><img src="https://randomuser.me/api/portraits/men/41.jpg" alt=""></div>
+        <div class="author"><img src="https://randomuser.me/api/portraits/women/50.jpg" alt=""></div>
+        <div class="author"><img src="https://randomuser.me/api/portraits/women/22.jpg" alt=""></div>
+        <div class="author"><img src="https://randomuser.me/api/portraits/women/76.jpg" alt=""></div>
+        <div class="author"><img src="https://randomuser.me/api/portraits/men/17.jpg" alt=""></div>
+    </div>
+</div>`
+})

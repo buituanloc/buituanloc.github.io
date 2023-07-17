@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <ul id="list">
+    <ul id="list" style="display: block;">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
@@ -29,19 +29,15 @@
         ul.insertAdjacentElement('beforeend', li8);
         ul.insertAdjacentElement('beforeend', li9);
         ul.insertAdjacentElement('beforeend', li10);
-
         //2
         const li1 = document.querySelector("li");
         li1.style.color = "red";
-
         //3
         const li3 = document.querySelector("ul li:nth-child(3)");
         li3.style.backgroundColor = "green";
-
         //4
         const li4 = document.querySelector("ul li:nth-child(4)");
         ul.removeChild(li4);
-
         //5
         const li = document.createElement("li");
         const li5 = document.querySelector("ul li:nth-child(4)")
@@ -49,18 +45,48 @@
         ul.insertBefore(li, li5)
 
         //Bài 1_day2
-        const btn = document.createElement("button")
+        const btn = document.createElement("button");
         btn.innerText = "Add";
-        const input = document.createElement("input")
+        btn.style.marginLeft = "10px"
+        const btn1 = document.createElement("button");
+        btn1.innerText = "Remove";
+        btn1.style.marginLeft = "10px"
+        const input = document.createElement("input");
         input.type = "text";
         input.id = "domain";
         input.name = "domain";
+        ul.insertAdjacentElement("afterend", btn1);
         ul.insertAdjacentElement("afterend", btn)
         ul.insertAdjacentElement("afterend", input);
         const li_n = document.createElement("li")
         btn.addEventListener("click", function() {
-            ul.insertAdjacentElement("beforeend", li_n)
-            li_n.textContent = document.getElementById("domain").value;
+            if (document.getElementById("domain").value == "") {
+                alert("Nội dung không được để trống")
+            } else {
+                ul.insertAdjacentElement("beforeend", li_n);
+                li_n.textContent = document.getElementById("domain").value;
+                document.getElementById("domain").value = "";
+            }
+        })
+
+        //Bài 2 day2
+        btn1.addEventListener("click", function() {
+            const li_remove = document.querySelector("ul li:last-child");
+            ul.removeChild(li_remove);
+        })
+
+        //Bài 3 day2
+        const hide = document.createElement("button");
+        hide.innerText = "Hide";
+        ul.insertAdjacentElement("beforebegin", hide);
+        hide.addEventListener("click", function() {
+            if (ul.style.display = "block") {
+                ul.style.display = "none";
+                hide.innerText = "Show";
+            } else {
+                ul.style.display = "block";
+                hide.innerText = "Hide";
+            }
         })
     </script>
 </body>
