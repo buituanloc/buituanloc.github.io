@@ -47,19 +47,29 @@ const renderTodoList = () => {
     let html = "";
     todoList.forEach(t => {
         if (t.status == true) {
+
+            //cách 1
             html += `<li>
-        <input type="checkbox" checked>
-        <span class="active">${t.title}</span>
-        <button onclick="editTodo(${t.id})">Edit</button>
-        <button onclick="deleteTodo(${t.id})">Delete</button>
-    </li>`
+                <input type="checkbox" checked>
+                <span class="active">${t.title}</span>
+                <button onclick="editTodo(${t.id})">Edit</button>
+                <button onclick="deleteTodo(${t.id})">Delete</button>
+            </li>`
         } else {
             html += `<li>
-            <input type="checkbox">
-            <span>${t.title}</span>
-            <button>Edit</button>
-            <button onclick="deleteTodo(${t.id})">Delete</button>
-        </li>`
+                    <input type="checkbox">
+                    <span>${t.title}</span>
+                    <button onclick="editTodo(${t.id})">Edit</button>
+                    <button onclick="deleteTodo(${t.id})">Delete</button>
+                </li>`;
+
+            //cách 2
+            // html += `
+            // <li>
+            //     <input type="checkbox" ${t.status ? "checked" : ""} onclick="toggleStatus(${t.id})"><span class="${t.status ? "active" : ""}">${t.title}</span>
+            //     <button onclick="editTodo(${t.id})">Edit</button>
+            //     <button onclick="deleteTodo(${t.id})">Delete</button>
+            // </li>`;
         }
     });
     todoListEl.innerHTML = html;
@@ -114,8 +124,8 @@ const deleteTodo = (id) => {
     //B1:Xóa todo có id tương ứng trong mảng todoList
     //Xóa như thế nào: splice,filter
     //C1:findIndex
-    let index = todoList.findIndex(t => t.id === id);
-    todoList.splice(index, 1);
+    // let index = todoList.findIndex(t => t.id === id);
+    // todoList.splice(index, 1);
 
     //C2:Filter
     todoList = todoList.filter(t => t.id !== id);
@@ -127,9 +137,22 @@ const deleteTodo = (id) => {
 
 
 //Công việc 4:Edit Todo
-const editTodo = id => {};
+const editTodo = id => {
+    const isPrompt = window.prompt("Nhập tiêu đề công việc cần sửa");
+    if (isPrompt.trim().length === 0) {
+        alert("Nội dung không được để trống");
+        return;
+    }
+    for (let i = 0; i < todoList.length; i++) {
+        if (todoList[i].id === id) {
+            todoList[i].title = isPrompt;
+        }
+    }
+    saveData();
+    renderTodoList();
+};
 
 //Công việc 5:Toggle status
-const toggleStatus = id => {};
+// const toggleStatus = id => {};
 
 renderTodoList(todoList);

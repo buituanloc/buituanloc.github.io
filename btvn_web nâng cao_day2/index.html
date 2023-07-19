@@ -78,15 +78,15 @@
 
         //Bài 3 day2
         const hide = document.createElement("button");
-        hide.innerText = "Hide";
+        const text = hide.innerHTML = "Hide";
         hide.style.marginRight = "10px"
         ul.insertAdjacentElement("beforebegin", hide);
         hide.addEventListener("click", function() {
-            if (ul.innerText = "Hide") {
+            if (text == "Hide") {
                 ul.style.display = "none";
-                hide.innerText = "Show";
+                hide.innerHTML = "Show";
             } else {
-                hide.innerText = "Hide";
+                hide.innerHTML = "Hide";
                 ul.style.display = "block";
             }
         })
