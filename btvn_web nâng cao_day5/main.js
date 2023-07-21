@@ -116,7 +116,7 @@ function handleOnChangeQuantity(id, price) {
 }
 
 // Cập nhật tổng tiền
-function totalPrice(voucher = null) {
+function totalPrice(voucher) {
     let sum = 0;
     let sumAfterVAT = 0;
     for (let i = 0; i < products.length; i++) {
