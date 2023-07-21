@@ -50,18 +50,18 @@ const renderTodoList = () => {
 
             //cách 1
             html += `<li>
-                <input type="checkbox" checked>
-                <span class="active">${t.title}</span>
-                <button onclick="editTodo(${t.id})">Edit</button>
-                <button onclick="deleteTodo(${t.id})">Delete</button>
-            </li>`
-        } else {
-            html += `<li>
-                    <input type="checkbox">
-                    <span>${t.title}</span>
+                    <input type="checkbox" checked onclick="toggleStatus(${t.id})">
+                    <span class="active">${t.title}</span>
                     <button onclick="editTodo(${t.id})">Edit</button>
                     <button onclick="deleteTodo(${t.id})">Delete</button>
-                </li>`;
+                </li>`
+        } else {
+            html += `<li>
+                        <input type="checkbox" onclick="toggleStatus(${t.id})">
+                        <span>${t.title}</span>
+                        <button onclick="editTodo(${t.id})">Edit</button>
+                        <button onclick="deleteTodo(${t.id})">Delete</button>
+                    </li>`;
 
             //cách 2
             // html += `
@@ -153,6 +153,12 @@ const editTodo = id => {
 };
 
 //Công việc 5:Toggle status
-// const toggleStatus = id => {};
+const toggleStatus = id => {
+    if (this.checked) {
+        alert("Bạn vừa thích freetuts.net");
+    }
+    // saveData();
+    // renderTodoList();
+};
 
 renderTodoList(todoList);
