@@ -18,13 +18,21 @@ var products = [{
     }
 ];
 
-//Danh sách promotion code (Mã giảm giá)
-let promotionCode = {
-    A: 10,
-    B: 20,
-    C: 30,
-    D: 40,
-};
+// Danh sách vouchers (Mã giảm giá)
+var vouchers = [{
+        id: 1,
+        code: "ABC",
+        value: 10,
+        type: "percent"
+
+    },
+    {
+        id: 2,
+        code: "XYZ",
+        value: 20,
+        type: "dollar"
+    }
+];
 
 //TRUY CẬP VÀO CÁC THÀNH PHẦN
 let subTotalEl = document.querySelector('.subtotal .total');
@@ -43,9 +51,10 @@ function renderUI() {
     let total = 0;
     if (products.length === 0) {
         html = 'Chưa có sản phẩm nào trong giỏ hàng';
+        document.querySelector('.option-container').style.display = 'none';
     } else {
         for (let i = 0; i < products.length; i++) {
-            total += products[i].price;
+            // total += products[i].price;
             html += `<li class="row">
                     <div class="col left">
                         <div class="thumbnail">
@@ -77,7 +86,7 @@ function renderUI() {
                     </div>
                 </li>`
         }
-        document.getElementsByClassName('total')[0].innerHTML = '$' + total;
+        // document.getElementsByClassName('total')[0].innerHTML = '$' + total;
     }
     document.getElementById('products').innerHTML = html;
 }
@@ -92,8 +101,7 @@ renderUI();
 //Arrow Function cú pháp viết gọn
 // const functionName = item => item.id === id
 
-
-//Cập nhật số lượng sản phẩm hiện có trong giỏ hàng và tổng tiền theo từng sản phẩm
+//Thay đổi số lượng sản phẩm hiện có trong giỏ hàng và tổng tiền theo từng sản phẩm
 function handleOnChangeQuantity(id, price) {
     let quantity = document.getElementById('product_' + id).value;
     if (quantity !== '' && quantity <= 0) {
@@ -104,44 +112,75 @@ function handleOnChangeQuantity(id, price) {
     // let newPrice = quantity * products.find(item => item.id === id).price; //Arrow Function
     let newPrice = quantity * price;
     document.getElementById('price_' + id).innerHTML = '$' + newPrice;
+    totalPrice();
 }
 
 // Cập nhật tổng tiền
-// function updateTotalMoney() {
-//     // Tính tổng tiền cart
-//     let totalMoney = 0;
-//     let discountMoney = 0;
+function totalPrice(voucher = null) {
+    let sum = 0;
+    let sumAfterVAT = 0;
+    for (let i = 0; i < products.length; i++) {
+        let quantity = document.getElementById("product_" + products[i].id).value;
+        sum += products[i].price * quantity;
+    }
 
-//     for (let i = 0; i < products.length; i++) {
-//         const p = arr[i];
-//         totalMoney += p.count * p.price;
-//     }
+    if (sum > 100) {
+        sumAfterVAT = sum + 5;
+        document.querySelector(".vat span").innerHTML = "$" + 5;
+    } else {
+        sumAfterVAT = sum;
+        document.querySelector(".vat span").innerHTML = "$" + 0;
+    }
 
-//     // Có mã giảm giá hay không?
-//     // Mã giảm giá có hợp lệ hay không?
-//     let data = checkPromotion();
+    if (voucher) {
+        if (voucher.type === "percent") {
+            sumAfterVAT = sumAfterVAT - (sumAfterVAT * voucher.value) / 100;
+        } else {
+            sumAfterVAT = sumAfterVAT - voucher.value;
+        }
+    }
 
-//     if (data) {
-//         discountMoney = (totalMoney * data) / 100;
-//         discount.classList.remove('hide');
-//     } else {
-//         discount.classList.add('hide');
-//     }
 
-//     // Cập nhật tiền lên trên giao diện
-//     subTotalEl.innerText = totalMoney;
-//     vatEl.innerText = totalMoney * 0.05;
-//     discountEle.innerText = discountMoney;
-//     totalEle.innerText = totalMoney * 1.05 - discountMoney;
-// }
+    document.getElementsByClassName("total")[0].innerHTML = "$" + sum;
+    document.getElementsByClassName("sub-total")[0].innerHTML = "$" + sumAfterVAT;
+}
+
+function handleVoucher() {
+    let code = document.getElementById("promo-code").value;
+
+    //cách 1:
+    let voucher = vouchers.find(voucher => voucher.code === code);
+
+    // //cách 2:Dùng vòng for lặp ra các giá trị của vouchers
+    // for (let i = 0; i < vouchers.length; i++) {
+    //     if (vouchers[i].code === code) {
+    //         let voucher = vouchers[i];
+    //     }
+    // }
+
+    if (!voucher) {
+        document.getElementsByClassName("text-error")[0].innerHTML = "Voucher không hợp lệ";
+    } else {
+        document.getElementsByClassName("text-error")[0].innerHTML = "";
+        totalPrice(voucher);
+    }
+}
 
 
 //Xóa sản phẩm khỏi giỏ hàng
 function removeItem(id) {
-    for (let i = 0; i < products.length; i++) {
-        if (products[i].id == id) {
-            products.splice(i, 1);
-        }
-    }
-    renderUI(products);
+    //C1:dùng filter để lọc ra các sản phẩm không trùng id,rồi gán mảng đã được filter = products
+    products = products.filter(e => e.id !== id);
+
+    // C2: dùng vòng lặp và sử dụng splice để loại bỏ phần tử khỏi mảng products
+    // for (let i = 0; i < products.length; i++) {
+    //     if (products[i].id == id) {
+    //         products.splice(i, 1);
+    //     }
+    // }
+
+    // C3: dùng find để tìm ra phần tử products, dùng splice để xóa
+    // product = products.find(e => e.id === id);
+    // products.splice(product, 1);
+    renderUI();
 }
