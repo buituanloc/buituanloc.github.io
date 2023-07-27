@@ -16,8 +16,8 @@ const productList = [{
     },
     {
         id: 3,
-        name: "Sản phẩm 3",
-        price: 9000000,
+        name: "iPhone 14 Pro Max 128GB",
+        price: 26580000,
         brand: "Apple",
         thumbnail: "https://images.fpt.shop/unsafe/fit-in/960x640/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2022/10/28/638025697712034572_iPhone%2014%20Promax%20(1).jpg",
         rating: 4
@@ -47,30 +47,32 @@ const formatPrice = price => {
 }
 
 // Hiển thị ds product
-const productEl = document.querySelector(".mt-5 .container .product-list");
 let html = "";
-productList.forEach(p => {
-    html += `<div class="col-md-3">
-    <div class="course-item shadow-sm rounded mb-4">
-        <div class="course-item-image">
-            <img src="${p.thumbnail}" alt="${p.name}"/>
-        </div>
-        <div class="course-item-info p-3">
-            <h2 class="fs-5 mb-4 text-dark">
-                ${p.name}
-            </h2>
-            <div class="d-flex justify-content-between align-items-center fw-light text-black-50">
-                <p class="type">${p.brand}</p>
-                <p class="rating">
-                    <span>${p.rating}</span>
-                    <span class="text-warning"><i class="fa-solid fa-star"></i></span>
-                </p>
-            </div>
-            <p class="price text-danger fs-5">
-                ${formatPrice(p.price)}
+let url = window.location.href;
+url = new URL(url);
+var id = url.searchParams.get('id');
+let p = productList.find(p => p.id === parseInt(id));
+html += `<a class="col-md-3" href="detail_product.html?id=${p.id}">
+<div class="course-item shadow-sm rounded mb-4">
+    <div class="course-item-image">
+        <img src="${p.thumbnail}" alt="${p.name}"/>
+    </div>
+    <div class="course-item-info p-3">
+        <h2 class="fs-5 mb-4 text-dark">
+            ${p.name}
+        </h2>
+        <div class="d-flex justify-content-between align-items-center fw-light text-black-50">
+            <p class="type">${p.brand}</p>
+            <p class="rating">
+                <span>${p.rating}</span>
+                <span class="text-warning"><i class="fa-solid fa-star"></i></span>
             </p>
         </div>
+        <p class="price text-danger fs-5">
+            ${formatPrice(p.price)}
+        </p>
     </div>
-</div>`
-})
-productEl.innerHTML = html;
+</div>
+</a>`
+
+$('.mt-5 .container .product-list').html(html);

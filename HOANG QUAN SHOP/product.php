@@ -19,11 +19,11 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 </head>
-<body>	
+<body>
 <div class="main" style='overflow: hidden;'>
 	<div class="products">
 		<div class="container">
-		<?php 
+		<?php
 							$id_sp=$_GET['id_sp'];
 
 							include ('MYSQL/connectmysql.php');
@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			</center>
-			
+
 			<ul id="thumbs">
 			<div class="col-xs-4">
 				<li class='active' rel='1' style='margin-left: 12px;'><img src="puclic/<?php echo $anh['anh_sp'] ?>" alt="" width='100%' /></li>
@@ -117,11 +117,11 @@
                                         QUÀ TẶNG
                                     </div>
                                     <div class="content">
-                                        
+
                                         - Trả góp lãi suất 0% dành cho chủ thẻ HSBC và Home Credit.<br>
 - Trả góp lãi suất 1% cùng FE Credit<br>
 Giá mua trả góp: 18.490.000đ <em>(Áp dụng từ 01/07 đến 31/07/2022)</em><br>- Ưu đãi trả góp: trả trước 0đ, lãi suất 1% (Áp dụng từ 01/07 đến 31/07/2022)</br>- Bảo hành 1 đổi 1 trong 1 tháng nếu hàng lỗi. (Áp dụng từ 01/07 đến 31/07/2022)
-                                        
+
                                     </div>
                                 </div>
 
@@ -155,7 +155,7 @@ Giá mua trả góp: 18.490.000đ <em>(Áp dụng từ 01/07 đến 31/07/2022)<
 			</div>
 
 
-				
+
 
 
 				<div class="row dacdiem">
@@ -202,14 +202,14 @@ Giá mua trả góp: 18.490.000đ <em>(Áp dụng từ 01/07 đến 31/07/2022)<
 						</div>
 					</div>
 
-					
+
 
 					<?php
 						}
 					}
 				}
 					}
-				
+
 					?>
 		</div>
 		<div class="cmt-fb">

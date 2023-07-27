@@ -121,7 +121,7 @@ function renderUI(listProducts = products) {
     }
     // document.getElementById('products').innerHTML = html;
     $('#products').html(html);
-}
+};
 
 // renderUI();
 $(document).ready(function() { //=== window.onload

@@ -1,5 +1,5 @@
 <?php
-						error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));  
+						error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 						if($_SESSION['users'] && $_SESSION['passs']){
 						?>
 <link rel="stylesheet" href="css/thongtinnguoidung.css">
@@ -8,8 +8,8 @@
 		<div class="container">
 			<div class="row plm">
 				<div class="col-md-3 col-sm-4">
-					
-						
+
+
 						<div class="mn">
                     <div class="cnhan">
                         <div class="t"><img src="img/tk1.png" alt=""> <span>Thông tin tài khoản</span></div>
@@ -37,7 +37,7 @@
                         <img src="img/tk3.png" alt="">
                             <a href="index.php?page=doimatkhau_nguoidung&id_tv=<?php echo $fuc['id_tv'] ?>"  class="">Đổi mật khẩu</a>
                         </li>
-                       
+
                     </ul>
                 </div>
             </div>
@@ -67,7 +67,7 @@
 							$que=mysqli_query($connection,$tv);
 							echo "<script> window.history.go(-2); </script>";
 						}
-					
+
 
 					?>
 					<form method='post'>
