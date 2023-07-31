@@ -110,7 +110,7 @@ function renderUI(listProducts = products) {
                     <div class="detail">
                         <div class="name"><a href="#">${listProducts[i].name}</a></div>
                         <div class="description">
-                            ${ listProducts[i].description }
+                            ${listProducts[i].description}
                         </div>
                         <div class="price" id="price_${listProducts[i].id}">$${listProducts[i].price}</div>
                         <div class="category">${listProducts[i].category}</div>
@@ -168,7 +168,6 @@ $(document).ready(function() { //=== window.onload
 $('#btn_search').on('click', function() {
     let productSearch = products;
     let category = $('#search-category').val();
-
     if (category) {
         //cách 1:Sử dụng filter để lọc ra tất cả các sản phẩm có category = value của select
         productSearch = productSearch.filter(item => item.category === category);
