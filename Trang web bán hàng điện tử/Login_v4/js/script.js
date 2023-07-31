@@ -2,7 +2,7 @@ const productList = [{
         id: 1,
         name: "samsung galaxy z fold 5",
         price: 40990000,
-        brand: "Samsung",
+        brand: 'Samsung',
         thumbnail: "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/7/26/638259900472658213_samsung-galaxy-fold5-xanh-dd.jpg",
         rating: 4
     },
@@ -10,7 +10,7 @@ const productList = [{
         id: 2,
         name: "Xiaomi 13 Lite 8GB-128GB",
         price: 8790000,
-        brand: "Xiaomi",
+        brand: 'Xiaomi',
         thumbnail: "https://images.fpt.shop/unsafe/fit-in/960x640/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2023/3/17/638146663769907963_DSC05437.JPG",
         rating: 5
     },
@@ -18,7 +18,7 @@ const productList = [{
         id: 3,
         name: "iPhone 14 Pro Max 128GB",
         price: 26580000,
-        brand: "Apple",
+        brand: 'Apple',
         thumbnail: "https://images.fpt.shop/unsafe/fit-in/960x640/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2022/10/28/638025697712034572_iPhone%2014%20Promax%20(1).jpg",
         rating: 4
     },
@@ -26,7 +26,7 @@ const productList = [{
         id: 4,
         name: "OPPO Reno10 5G",
         price: 10990000,
-        brand: "Oppo",
+        brand: 'Oppo',
         thumbnail: "https://fptshop.com.vn/landing-oppo-reno10-5g/images/reno-gray.png?v=15280721",
         rating: 3
     },
@@ -34,11 +34,11 @@ const productList = [{
         id: 5,
         name: "Vivo V25 Pro 5G 128GB",
         price: 9990000,
-        brand: "Vivo",
+        brand: 'Vivo',
         thumbnail: "https://images.fpt.shop/unsafe/fit-in/960x640/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2022/11/15/638041031533178374_HASP-Vivo%20V25%20Pro-5.JPG",
         rating: 5
     }
-]
+];
 
 // Format tiền theo định dạng VND
 const formatPrice = price => {
@@ -67,7 +67,7 @@ function renderUI(products = productList) {
                             <span class="text-warning"><i class="fa-solid fa-star"></i></span>
                         </p>
                     </div>
-                    <p class="price" id="price_${products[i].id}">
+                    <p class="price text-danger fs-5" id="price_${products[i].id}">
                         ${formatPrice(products[i].price)}
                     </p>
                     <div></div>

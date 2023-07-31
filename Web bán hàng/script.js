@@ -110,7 +110,7 @@ function renderUI(listProducts = products) {
                     <div class="detail">
                         <div class="name"><a href="#">${listProducts[i].name}</a></div>
                         <div class="description">
-                            ${listProducts[i].description}
+                            ${ listProducts[i].description }
                         </div>
                         <div class="price" id="price_${listProducts[i].id}">$${listProducts[i].price}</div>
                         <div class="category">${listProducts[i].category}</div>
@@ -194,7 +194,7 @@ $('#btn_search').on('click', function() {
     // }
 
     if (minPrice) {
-        productSearch = productSearch.filter(item => item.price >= minPrice);
+        productSearch = productSearch.filter(item => );
         console.log(productSearch);
     }
     if (maxPrice) {
