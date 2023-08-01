@@ -79,7 +79,7 @@ function renderUI(products = productList) {
     $('.mt-5 .container .product-list').html(html);
 };
 
-$(document).ready(function() { //=== window.onload
+$(document).ready(function() {
     renderUI();
 });
 
@@ -102,7 +102,7 @@ $('#btn_search').on('click', function() {
         productSearch = productSearch.filter(item => item.price <= maxPrice);
         console.log(productSearch);
     }
-    $(document).ready(function() { //=== window.onload
+    $(document).ready(function() {
         renderUI();
     });
 })

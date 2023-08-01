@@ -123,7 +123,7 @@ function renderUI(listProducts = products) {
 };
 
 // renderUI();
-$(document).ready(function() { //=== window.onload
+$(document).ready(function() {
     renderUI();
 });
 
@@ -193,7 +193,7 @@ $('#btn_search').on('click', function() {
     // }
 
     if (minPrice) {
-        productSearch = productSearch.filter(item => );
+        productSearch = productSearch.filter(item => item => item.category === category);
         console.log(productSearch);
     }
     if (maxPrice) {
@@ -201,7 +201,7 @@ $('#btn_search').on('click', function() {
         console.log(productSearch);
     }
     // renderUI(productSearch);
-    $(document).ready(function() { //=== window.onload
+    $(document).ready(function() {
         renderUI(productSearch);
     });
 })
