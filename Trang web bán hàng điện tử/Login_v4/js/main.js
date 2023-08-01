@@ -31,7 +31,9 @@ const btnLogin = $('#btn-login').on('click', function() {
     let data = JSON.parse(user);
     if (username != data.username || password != data.password) {
         alert('Sai tài khoản hoặc mật khẩu');
-    } else if (username == "" && password == "") {
+    } else if (username == "") {
+        alert('Vui lòng nhập username và password');
+    } else if (password == "") {
         alert('Vui lòng nhập username và password');
     } else {
         window.location.href = 'homepage.html';
