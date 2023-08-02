@@ -32,9 +32,9 @@ const btnLogin = $('#btn-login').on('click', function() {
     if (username != data.username || password != data.password) {
         alert('Sai tài khoản hoặc mật khẩu');
     } else if (username == "") {
-        alert('Vui lòng nhập username và password');
+        alert('Vui lòng nhập username');
     } else if (password == "") {
-        alert('Vui lòng nhập username và password');
+        alert('Vui lòng nhập password');
     } else {
         window.location.href = 'homepage.html';
         alert('Đăng nhập thành công');
