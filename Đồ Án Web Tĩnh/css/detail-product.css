@@ -5,6 +5,7 @@ a {
 img {
     height: auto;
     width: auto;
+    max-width: 100%;
 }
 
 .header-promotion {
@@ -958,4 +959,73 @@ h3 {
 .block-service {
     border-bottom: 1px solid #e9eaeb;
     margin-bottom: 8px;
+}
+
+.block-service.block-service-style2 .container {
+    padding: 0;
+    justify-content: space-between;
+}
+
+.block-service .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-service.block-service-style2 .item:nth-child(n) {
+    width: auto;
+}
+.block-service .item:nth-child(1), .block-service .item:nth-child(3) {
+    width: 340px;
+}
+.block-service.block-service-style2 .item {
+    width: auto;
+}
+.block-service .item {
+    color: rgba(51,63,72,.5);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: flex-start;
+    padding: 18px 0 10px;
+}
+
+.block-service .item .icon {
+    margin-right: 4px;
+    width: 44px;
+    min-width: 44px;
+}
+
+.block-service .item .icon img, .block-service .item .icon svg {
+    display: block;
+}
+
+.block-service .item .content {
+    flex-grow: 1;
+}
+
+.block-service .item h3 {
+    color: #333f48;
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.block-service.block-service-style2 .line {
+    width: 1px;
+    background-color: #e6e7e8;
+    margin: 0 30px;
+}
+
+.block-service.block-service-style2 .item2, .block-service.block-service-style2 .line2 {
+    order: 2;
+}
+
+.block-service.block-service-style2 .line:last-child {
+    display: none;
+}
+.block-service.block-service-style2 .item3, .block-service.block-service-style2 .line3 {
+    order: 3;
 }
