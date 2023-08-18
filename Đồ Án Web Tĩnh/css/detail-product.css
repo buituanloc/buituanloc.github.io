@@ -405,6 +405,12 @@ h3 {
     text-decoration: none;
 }
 
+.breadcrumbs .item:not(:last-child):after {
+    content: "|";
+    margin: 0 6px;
+    color: #c8c7cc;
+}
+
 .breadcrumbs strong {
     font-weight: 400;
     color: #333f48;
@@ -461,6 +467,11 @@ h3 {
     -webkit-transform: rotate(0);
     -ms-transform: rotate(0);
     transform: rotate(0);
+}
+
+.fotorama__wrap .fotorama__stage .slick-next {
+    right: 14px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1LjA1NzMgMjQuMzkxOEMxNC41MzY2IDI0LjkxMjUgMTQuNTM2NiAyNS43NTY3IDE1LjA1NzMgMjYuMjc3NEMxNS41NzggMjYuNzk4MSAxNi40MjIyIDI2Ljc5ODEgMTYuOTQyOSAyNi4yNzc0TDI2LjI3NjIgMTYuOTQ0MUMyNi43OTY5IDE2LjQyMzQgMjYuNzk2OSAxNS41NzkyIDI2LjI3NjIgMTUuMDU4NUwxNi45NDI5IDUuNzI1MTZDMTYuNDIyMiA1LjIwNDQ2IDE1LjU3OCA1LjIwNDQ2IDE1LjA1NzMgNS43MjUxNkMxNC41MzY2IDYuMjQ1ODYgMTQuNTM2NiA3LjA5MDA4IDE1LjA1NzMgNy42MTA3OEwyMi4xMTQ1IDE0LjY2OEw2LjY2Njc1IDE0LjY2OEM1LjkzMDM3IDE0LjY2OCA1LjMzMzQxIDE1LjI2NDkgNS4zMzM0MiAxNi4wMDEzQzUuMzMzNDIgMTYuNzM3NyA1LjkzMDM3IDE3LjMzNDYgNi42NjY3NSAxNy4zMzQ2TDIyLjExNDUgMTcuMzM0NkwxNS4wNTczIDI0LjM5MThaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
 }
 
 .fotorama__wrap .fotorama__stage .slick-dots {
@@ -520,6 +531,18 @@ h3 {
 }
 .slick-dots li button {
     display: none;
+}
+
+button {
+    cursor: pointer;
+}
+button, input, optgroup, select, textarea {
+    font: inherit;
+    color: inherit;
+    padding: 6px 12px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
 }
 
 .glide__track {
@@ -1029,3 +1052,173 @@ h3 {
 .block-service.block-service-style2 .item3, .block-service.block-service-style2 .line3 {
     order: 3;
 }
+
+.fotorama__wrap .fotorama__nav {
+    width: 72px;
+    margin-left: 32px;
+}
+
+.fotorama__wrap .fotorama__nav .slick-list {
+    max-height: 600px;
+}
+
+.fotorama__wrap .fotorama__nav .slick-slide {
+    margin-bottom: 0;
+}
+
+.fotorama__wrap .fotorama__nav .sf-button--pure {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    padding-bottom: 8px;
+    position: relative;
+    box-shadow: none;
+}
+
+.sf-button--pure {
+    --button-padding: 0;
+    --button-background: transparent;
+    --button-color: var(--c-text);
+    --button-text-transform: none;
+    --button-wrap: normal;
+}
+
+.sf-button {
+    box-sizing: border-box;
+    width: var(--button-size, var(--button-width));
+    height: var(--button-size, var(--button-height));
+    display: var(--button-display, flex);
+    align-items: center;
+    justify-content: center;
+    padding: var(--button-padding, var(--spacer-sm) calc(var(--spacer-sm) * 2));
+    color: var(--button-color, var(--c-light-variant));
+    background: var(--button-background, var(--c-primary));
+    box-shadow: var(--button-box-shadow);
+    text-transform: var(--button-text-transform, uppercase);
+    text-decoration: var(--button-text-decoration);
+    transition: var(--button-transition, box-shadow 150ms ease-in-out);
+    cursor: var(--button-cursor, pointer);
+    border-radius: var(--button-border-radius, 0);
+    white-space: var(--button-wrap, nowrap);
+    font: var(--button-font, var(--button-font-weight, var(--font-semibold)) var(--button-font-size, var(--font-base))/var(--button-font-line-height, 1.2) var(--button-font-family, var(--font-family-secondary)));
+    border: var(--button-border, var(--button-border-style, solid) var(--button-border-color, var(--c-primary)));
+    border-width: var(--button-border-width, 0);
+}
+
+.fotorama__wrap .fotorama__nav .sf-gallery__thumb {
+    position: relative;
+    height: 95px;
+    width: 100%;
+    margin: 0;
+}
+
+.sf-gallery__thumb {
+    margin: 0px;
+}
+
+.sf-gallery__thumb {
+    width: var(--gallery-thumb-width, calc(var(--_image-width, 10rem) * 1px));
+    height: var(--gallery-thumb-height, calc(var(--_image-height, 10rem) * 1px));
+    margin-bottom: 14px;
+}
+
+.fotorama__wrap .fotorama__nav .sf-gallery__thumb:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333f48;
+    border-radius: 2px;
+    z-index: 3;
+    opacity: 0;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link data-vue-meta="1" rel="icon" type="image/ico" href="https://canifa.com/assets/favicon-32x32.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div id="app">
+        <div data-v-b8c9e492="" class="wrapper">
+            <div data-v-5118cb58="" data-v-b8c9e492="" class="m-loader" style="display: none;">
+                <div data-v-5118cb58="" class="m-loader--container">
+                    <div data-v-5118cb58="" class="sf-loader">
+                        <div class="sf-loader__overlay">
+                            <svg role="img" width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg"
+                            class="sf-loader__spinner">
+                                <title>Loading...</title>
+                                <g fill="none" fill-rule="evenodd">
+                                    <g transform="translate(1 1)" stroke-width="2">
+                                        <circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle>
+                                        <path d="M36 18c0-9.94-8.06-18-18-18">
+                                            <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s"
+                                            repeatCount="indefinite">
+                                            </animateTransform>
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header data-v-41f4a2e6="" data-v-b8c9e492="" class="site-header site-header-cart  canifa">
+                <div data-v-41f4a2e6="" class="site-header-container">
+                    <div data-v-41f4a2e6="" class="header-logo">
+                        <div data-v-41f4a2e6="" class="header-logo">
+                            <a href="/" class="a-logo router-link-active" title="Home Page">
+                                <img src="https://canifa.com/assets/images/logo.svg" width="100" height="100" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div data-v-41f4a2e6="" class="header-button">
+                        <a data-v-41f4a2e6="" href="homepage.html">Tiếp tục mua sắm</a>
+                    </div>
+                </div>
+            </header>
+            <div data-v-3ecbbab4="" data-v-b8c9e492="">
+                <main data-v-3ecbbab4="" class="site-main">
+                    <div data-v-3ecbbab4="" class="container">
+                        <ul data-v-3ecbbab4="" class="checkout-progress-bar">
+                            <li data-v-3ecbbab4="" class="checkout-progress-bar-item active">
+                                <span data-v-3ecbbab4="" class="step">1</span>
+                                <span data-v-3ecbbab4="">Giỏ hàng</span>
+                            </li>
+                            <li data-v-3ecbbab4="" class="checkout-progress-bar-item current">
+                                <span data-v-3ecbbab4="" class="step">2</span>
+                                <span data-v-3ecbbab4="">Đặt hàng</span>
+                            </li>
+                            <li data-v-3ecbbab4="" class="checkout-progress-bar-item">
+                                <span data-v-3ecbbab4="" class="step">3</span>
+                                <span data-v-3ecbbab4="">Hoàn tất</span>
+                            </li>
+                        </ul>
+                        <div data-v-3ecbbab4="" class="checkout-container">
+                            <div data-v-3ecbbab4="" class="checkout-container--left">
+                                <div data-v-3ecbbab4="" class="checkout-form">
+                                    <div data-v-3ecbbab4="" class="checkout-step checkout-shipping">
+                                        <div data-v-3ecbbab4="">
+                                            <div>
+                                                <div class="checkout-step-title">
+                                                    <h2>Thông tin giao hàng</h2>
+                                                    <a href="#" class="edit">Thay đổi</a>
+                                                </div>
+                                                <div>
+                                                    <div class="checkout-step-content">
+                                                        <div class="shipping-address-items">
+                                                            <div class="shipping-address-item">
+                                                                <div class="name">Bùi Tuấn Lộc<span class="phone">0981872180</span></div>
+                                                                <div class="address">29-Ngõ 17 Trung Văn, Quận Nam Từ Liêm, Hà Nội</div>
+                                                                <div class="address-type"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkout-shipping-form">
+                                                            <div class="form-group form-comment">
+                                                                <label for="ghi-chu">Ghi chú</label>
+                                                                <textarea id="ghi-chu" placeholder="Nhập ghi chú..."
+                                                                class="form-control">
+                                                                </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-step checkout-payment-method" isactive="true">
+                                        <div class="checkout-step-title">
+                                            <h2>Phương thức thanh toán</h2>
+                                        </div>
+                                        <div class="checkout-step-content">
+                                            <div class="checkout-payment-method-section">
+                                                <label for="cashondelivery">
+                                                    <input id="cashondelivery" type="radio" value="cashondelivery">
+                                                    <span>
+                                                        <b>Thanh toán khi nhận hàng (COD)</b>
+                                                        <img src="https://canifa.com/assets/images/cod.svg">
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="checkout-payment-method-section">
+                                                <label for="vnpay">
+                                                    <input id="vnpay" type="radio" value="vnpay">
+                                                    <span>
+                                                        <b>Thanh toán bằng VNPAY</b>
+                                                        <img src="https://canifa.com/assets/images/vnpay.svg">
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="checkout-payment-method-section">
+                                                <label for="shopee_pay">
+                                                    <input id="shopee_pay" type="radio" value="shopee_pay">
+                                                    <span>
+                                                        <b>Thanh toán bằng ShopeePay</b>
+                                                        <img src="https://canifa.com/assets/images/shopeepay.svg">
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-step checkout-review">
+                                        <div class="checkout-step-title">
+                                            <h2>Sản phẩm (1)</h2>
+                                        </div>
+                                        <div class="checkout-step-content">
+                                            <table class="checkout-cart-items">
+                                                <tbody>
+                                                    <tr class="cart-item">
+                                                        <td class="col item">
+                                                            <div class="cart-item-info">
+                                                                <div class="cart-item-photo">
+                                                                    <a href="/ao-ba-lo-nam-8ta23s003-sb120" class="cart-image-container">
+                                                                        <img
+                                                                        src="https://canifa.com/img/210/300/resize/8/t/8ta23s003-sb120-xl-1.webp">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="cart-item-details">
+                                                                    <strong class="cart-item-name">
+                                                                        <a href="/ao-ba-lo-nam-8ta23s003-sb120" class="cart-image-container">
+                                                                            Áo ba lỗ nam active có in chữ
+                                                                        </a>
+                                                                    </strong>
+                                                                    <div class="cart-item-options">
+                                                                        <div class="cart-item-option">
+                                                                            <span>
+                                                                                <span class="swatch-option color"
+                                                                                style="background-image: url(&quot;https://media.canifa.com/attribute/swatch/images/sb120.png&quot;);">
+                                                                                </span>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="cart-item-option">
+                                                                            <span>
+                                                                                <span class="swatch-option text">L</span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="col price">
+                                                            <span class="price">299.000 ₫</span>
+                                                        </td>
+                                                        <td class="col qty">
+                                                            <span>Số lượng : 1</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-container--right">
+                                <div class="checkout-step checkout-coupon-wrapper">
+                                    <div>
+                                        <div class="checkout-coupon">
+                                            <div class="checkout-step-title">
+                                                <h2>Mã ưu đãi</h2>
+                                                <div class="action-show">
+                                                    <span>Chọn hoặc nhập mã</span>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-step-content"></div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-point">
+                                        <div class="checkout-step-title">
+                                            <strong >Dùng C-point</strong>
+                                            <div class="alert-note"></div>
+                                            <div class="amount">0</div>
+                                        </div>
+                                        <div class="checkout-step-content">
+                                            <div class="checkout-point-form">
+                                                <input type="text" name="cpoint" placeholder="Nhập số C-point" class="form-control">
+                                                <button class="btn-add-point btn-add">Áp dụng</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-step checkout-summary">
+                                    <div>
+                                        <div class="checkout-step-title">
+                                            <h2>Chi tiết đơn hàng</h2>
+                                        </div>
+                                        <div class="checkout-totals">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Giá trị đơn hàng</th>
+                                                        <td>299.000 ₫</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Phí giao hàng</th>
+                                                        <td>30.000 ₫</td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr class="cpoint">
+                                                        <th>C-point tích lũy</th>
+                                                        <td>+0</td>
+                                                    </tr>
+                                                    <tr class="khtt">
+                                                        <th>Điểm KHTT</th>
+                                                        <td>+30</td>
+                                                    </tr>
+                                                    <tr class="grand-totals">
+                                                        <th>Tổng tiền thanh toán
+                                                            <small>(Đã bao gồm thuế VAT)</small>
+                                                        </th>
+                                                        <td data-v-13764b59="">329.000 ₫</td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="checkout-proceed-checkout">
+                                        <button class="btn-place-order">Thanh toán</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <main class="site-main" style="display: none;">
+                    <div class="goback-vnpay">
+                        <h1>Bạn muốn quay lại bước đặt hàng?</h1>
+                        <a href="#" class="btn btn-primary">TIẾP TỤC thanh toán</a>
+                        <a href="#" class="btn btn-outline">THAY ĐỔI PHƯƠNG THỨC THANH TOÁN</a>
+                        <a href="#" class="btn btn-outline">TIẾP TỤC MUa sắm</a>
+                        <a href="#" class="btn btn-link">HUỶ ĐƠN HÀNG</a>
+                    </div>
+                </main>
+            </div>
+            <div class="o-modal hide">
+                <span></span>
+            </div>
+            <div class="o-notification"></div>
+        </div>
+        <div class="modal-addcart-success modal in" style="display:none">
+            <section class="sf-modal"></section>
+        </div>
+    </div>
+</body>
+</html>
