@@ -870,7 +870,6 @@ h3 {
 }
 
 .product-item .price-box .old-price .price {
-    -webkit-text-decoration-line: line-through;
     text-decoration-line: line-through;
     font-weight: 400;
 }
