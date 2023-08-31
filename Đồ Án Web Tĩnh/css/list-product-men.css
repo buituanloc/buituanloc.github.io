@@ -8,7 +8,8 @@ img {
     max-width: 100%;
 }
 
-img, svg {
+img,
+svg {
     vertical-align: middle;
 }
 
@@ -151,7 +152,7 @@ li {
 
 .header-icon {
     margin-left: 32px;
-    color: rgba(51,63,72,.5);
+    color: rgba(51, 63, 72, .5);
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
@@ -198,7 +199,7 @@ li {
     line-height: 13px;
     text-align: center;
     color: #fff;
-    text-shadow: 0 4px 8px rgba(16,24,40,.1),0 2px 4px rgba(16,24,40,.06);
+    text-shadow: 0 4px 8px rgba(16, 24, 40, .1), 0 2px 4px rgba(16, 24, 40, .06);
     background: #da291c;
     border-radius: 11px;
     min-width: 18px;
@@ -411,7 +412,9 @@ h3 {
     margin: 0 6px;
     color: #c8c7cc;
 }
-:after, :before {
+
+:after,
+ :before {
     box-sizing: border-box;
 }
 
@@ -426,6 +429,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
 }
+
 .filter-by-cat {
     list-style: none;
     padding: 0;
@@ -440,6 +444,7 @@ h3 {
 .filter-by-cat li.active span {
     border-color: #333f48;
 }
+
 .filter-by-cat li span {
     display: block;
     background: #fff;
@@ -525,6 +530,10 @@ h3 {
     top: 16px;
 }
 
+.filter-options .filter-options-item.active .filter-options-title:after {
+    transform: rotate(180deg);
+}
+
 .filter-options .filter-options-content {
     padding-bottom: 12px;
     display: none;
@@ -533,6 +542,7 @@ h3 {
 .filter-options .swatch-attribute.size .swatch-attribute-options {
     max-width: 380px;
 }
+
 .swatch-attribute-options {
     flex-wrap: wrap;
     display: flex;
@@ -602,6 +612,7 @@ h3 {
 .range-value.min {
     left: -16px;
 }
+
 .price-range .range-value {
     position: absolute;
     font-weight: 500;
@@ -630,7 +641,8 @@ h3 {
     background-color: #ddd;
 }
 
-.track, .track-highlight {
+.track,
+.track-highlight {
     display: block;
     position: absolute;
     width: 100%;
@@ -653,13 +665,18 @@ h3 {
     position: absolute;
     z-index: 5;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 button {
     cursor: pointer;
 }
-button, input, optgroup, select, textarea {
+
+button,
+input,
+optgroup,
+select,
+textarea {
     font: inherit;
     color: inherit;
     padding: 6px 12px;
@@ -678,7 +695,7 @@ button, input, optgroup, select, textarea {
     position: absolute;
     z-index: 5;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .columns>.column.main {
@@ -689,7 +706,10 @@ button, input, optgroup, select, textarea {
     width: 83.33333333%;
 }
 
-.row [class*=col-lg], .row [class*=col-md], .row [class*=col-sm], .row [class*=col-xs] {
+.row [class*=col-lg],
+.row [class*=col-md],
+.row [class*=col-sm],
+.row [class*=col-xs] {
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -728,7 +748,7 @@ button, input, optgroup, select, textarea {
     top: 100%;
     margin-top: 20px;
     min-width: 281px;
-    box-shadow: 0 0.5px 2px rgba(96,97,112,.16);
+    box-shadow: 0 0.5px 2px rgba(96, 97, 112, .16);
     display: none;
 }
 
@@ -738,7 +758,7 @@ button, input, optgroup, select, textarea {
     line-height: 22px;
     position: relative;
     padding: 13px 15px 9px 15px;
-    box-shadow: 0 0.5px 2px rgba(96,97,112,.16);
+    box-shadow: 0 0.5px 2px rgba(96, 97, 112, .16);
     display: none;
 }
 
@@ -756,7 +776,7 @@ button, input, optgroup, select, textarea {
 
 .screen-reader-text {
     border: 0;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -770,7 +790,7 @@ button, input, optgroup, select, textarea {
     list-style: none;
     padding: 8px 20px 12px;
     margin: 0;
-    color: rgba(51,63,72,.5);
+    color: rgba(51, 63, 72, .5);
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
@@ -836,7 +856,7 @@ button, input, optgroup, select, textarea {
 }
 
 .product-item-button-tocart {
-    background: rgba(250,250,250,.85);
+    background: rgba(250, 250, 250, .85);
     border-radius: 2px;
     height: 36px;
     cursor: pointer;
@@ -871,6 +891,7 @@ button, input, optgroup, select, textarea {
 .product-item .swatch-option.selected {
     border-color: #333f48;
 }
+
 .product-item .swatch-option {
     width: 24px;
     height: 24px;
@@ -954,6 +975,7 @@ button, input, optgroup, select, textarea {
 .toolbar-products {
     margin-top: 0;
 }
+
 .toolbar {
     margin-top: 24px;
 }
@@ -962,6 +984,7 @@ button, input, optgroup, select, textarea {
     justify-content: flex-end;
     margin: 80px 0;
 }
+
 .pages-items {
     flex-wrap: wrap;
     display: -ms-flexbox;
@@ -982,7 +1005,9 @@ button, input, optgroup, select, textarea {
     font-weight: 700;
     border-color: #da291c;
 }
-.pages-items .action, .pages-items .page {
+
+.pages-items .action,
+.pages-items .page {
     min-width: 32px;
     height: 32px;
     display: block;
