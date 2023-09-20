@@ -78,7 +78,7 @@ function renderUI(products = productList) {
     };
     $('.mt-5 .container .product-list').html(html);
 };
-
+console.log($('.mt-5 .container .product-list'));
 $(document).ready(function() {
     renderUI();
 });

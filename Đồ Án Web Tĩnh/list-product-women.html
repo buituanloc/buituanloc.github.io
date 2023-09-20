@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
@@ -106,7 +108,7 @@
                                     <a href="/" class="router-link-active">Trang chủ</a>
                                 </li>
                                 <li class="item">
-                                    <a href="/nam.html" class>Nam</a>
+                                    <a href="/nam.html" class>Nữ</a>
                                 </li>
                                 <li class="item">
                                     <a href="/nam/ao.html" class>Áo</a>
@@ -144,7 +146,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="row">
+                        <div class="columns row">
                             <div class="sidebar col-sm-2">
                                 <div class="category-left-sidebar">
                                     <div class="label">Danh mục</div>
@@ -303,6 +305,127 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="column main col-sm-10">
+                                <div class="toolbar-sorter">
+                                    <div class="toolbar-sorter-action"><strong>Sắp xếp theo</strong></div>
+                                    <div class="toolbar-sorter-content">
+                                        <div class="title"><strong>Sắp xếp theo</strong>
+                                            <div class="close"><span class="screen-reader-text">Close</span></div>
+                                        </div>
+                                        <ul>
+                                            <li class="">Mới nhất</li>
+                                            <li class="">Giá: thấp đến cao</li>
+                                            <li class="">Giá: cao đến thấp</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="block filter">
+                                    <div class="block-title">
+                                        <div class="filter-title">
+                                            Bộ lọc
+                                        </div>
+                                        <div class="toolbar-sorter">
+                                            <label for="sorter" class="sorter-label">Sắp xếp</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products-grid">
+                                    <div class="product-items" id="products">
+                                        <!-- <div class="product-item products__product-card">
+                                            <div class="product-item-info">
+                                                <div class="product-item-photo">
+                                                    <a href="/ao-phong-nu-6ts23s012" class="product-image-container">
+                                                        <div>
+                                                            <img src="https://canifa.com/img/486/733/resize/6/t/6ts23s012-sg067-2-thumb.webp" alt="Áo phông nữ cotton cổ tròn dáng oversize có hình in" width="100" height="100" class="product-image-photo">
+                                                        </div>
+                                                    </a>
+                                                    <div>
+                                                        <div class="product-item-button-tocart">
+                                                            <span>Thêm nhanh vào giỏ</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item-details">
+                                                    <div class="swatch-attribute-options">
+                                                        <div class="swatch-option color selected" style="background-image: url(&quot;https://media.canifa.com/attribute/swatch/images/sg067.png&quot;);"></div>
+                                                        <div class="swatch-option color " style="background-image: url(&quot;https://media.canifa.com/attribute/swatch/images/sw001.png&quot;);"></div>
+                                                    </div>
+                                                    <h3 class="product-item-name">
+                                                        <a href="/ao-phong-nu-6ts23s012">Áo phông nữ cotton cổ tròn dáng oversize có hình in</a>
+                                                    </h3>
+                                                    <div class="price-box">
+                                                        <span class="normal-price">
+                                                            <span class="price">209.300 ₫</span>
+                                                        </span>
+                                                        <span class="price-percent">-30%</span>
+                                                        <span class="old-price">
+                                                            <span class="price">299.000 ₫</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <!-- <div class="product-item products__product-card">
+                                            <div class="product-item-info">
+                                                <div class="product-item-photo">
+                                                    <a href="/ao-phong-nu-6ts23s020" class="product-image-container">
+                                                        <div>
+                                                            <img src="https://canifa.com/img/486/733/resize/6/t/6ts23s020-sk010-2-thumb.webp" alt="Áo phông nữ cotton có hình in Winnie The Pooh dáng suông" width="100" height="100" class="product-image-photo">
+                                                        </div>
+                                                    </a>
+                                                    <div>
+                                                        <div class="product-item-button-tocart">
+                                                            <span>Thêm nhanh vào giỏ</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item-details ">
+                                                    <div class="swatch-attribute-options ">
+                                                        <div class="swatch-option color selected" style="background-image: url(&quot;https://media.canifa.com/attribute/swatch/images/sk010.png&quot;);"></div>
+                                                        <div class="swatch-option color" style="background-image: url(&quot;https://media.canifa.com/attribute/swatch/images/sw001.png&quot;);"></div>
+                                                    </div>
+                                                    <h3 class="product-item-name">
+                                                        <a href="/ao-phong-nu-6ts23s020">Áo phông nữ cotton có hình in Winnie The Pooh dáng suông</a>
+                                                    </h3>
+                                                    <div class="price-box">
+                                                        <span class="normal-price">
+                                                            <span class="price">199.000 ₫</span>
+                                                        </span>
+                                                        <span class="price-percent">-33%</span>
+                                                        <span class="old-price">
+                                                            <span class="price">299.000 ₫</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-item-label-text ">Độc quyền Online</div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="toolbar toolbar-products ">
+                                    <div class="pages ">
+                                        <ul class="items pages-items ">
+                                            <li class="item current ">
+                                                <strong class="page ">
+                                                    <span class="label ">1</span>
+                                                    <span>1</span>
+                                                </strong>
+                                            </li>
+                                            <li class="item ">
+                                                <strong class="page ">
+                                                    <span class="label ">2</span>
+                                                    <span>2</span>
+                                                </strong>
+                                            </li>
+                                            <li class="item pages-item-next ">
+                                                <a title="Next " class="action next ">
+                                                    <span class="label ">Page</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </main>
@@ -422,13 +545,17 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.7.0.js " integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin=" anonymous "></script>
     <script>
-        let display_size = document.querySelector(".filter-options .filter-options-item .filter-options-title");
-        display_size.addEventListener("click", function() {
-            let content_size = document.querySelector(".filter-options .filter-options-item .filter-options-content");
-            content_size.style.display = "block";
-            // display_size.style.transform = "rotate(180deg)";
+        let display_size = document.querySelector(".filter-options .filter-options-item .filter-options-title ");
+        display_size.addEventListener("click ", function() {
+            let content_size = document.querySelector(".filter-options .filter-options-item .filter-options-content ");
+            content_size.style.display = "block ";
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/index.js "></script>
+    <script src="js/list-product-women.js"></script>
 </body>
+
+</html>
 
 </html>
