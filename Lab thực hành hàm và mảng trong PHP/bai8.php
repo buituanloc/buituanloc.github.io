@@ -1,6 +1,7 @@
 <?php
 function findKthLargest($arr, $k) {
-
+    rsort($arr);
+    return $arr[$k - 1];
 }
 
 // Gọi hàm để kiểm tra kết quả
