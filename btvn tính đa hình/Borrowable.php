@@ -21,13 +21,13 @@ interface Borrowable{
                $this->isBrrowed = true;
                echo "Sách '{$this->title}' của '{$this->author}' đã được mượn." . "<br>";
            } else {
-               echo "Sách đã được mượn từ trước, không thể mượn."  . "<br>";
+               echo "Sách đã được mượn ."  . "<br>";
            }
        }
 
        public function returnItem() {
            $this->isBorrowed = false;
-           echo "Sách '{$this->title}' của '{$this->author}' đã được trả lại." . "<br>";
+           echo "Sách '{$this->title}' của '{$this->author}' đã được trả." . "<br>";
        }
        // function borrow()
 
