@@ -21,7 +21,7 @@ interface Borrowable{
                $this->isBrrowed = true;
                echo "Sách '{$this->title}' của '{$this->author}' đã được mượn." . "<br>";
            } else {
-               echo "Sách đã được mượn ."  . "<br>";
+               echo "Sách đã được mượn ." . "<br>";
            }
        }
 
@@ -29,13 +29,7 @@ interface Borrowable{
            $this->isBorrowed = false;
            echo "Sách '{$this->title}' của '{$this->author}' đã được trả." . "<br>";
        }
-       // function borrow()
 
-       // Nếu sách chưa được mượn thì thực hiện cho mượn và trả ra thông báo sách $title của $author đã được mượn
-       // Nếu không thì trả về thông báo "sách đã được mượn từ trước, ko thể mượn"
-
-       // function returnItem()
-       // viết code trả sách và trả về thông báo trả sách thành công
    }
 
    Class Paper implements Borrowable{
@@ -59,6 +53,6 @@ interface Borrowable{
 
        public function returnItem() {
            $this->isBorrowed = false;
-           echo "Sách '{$this->title}' của '{$this->author}' đã được trả lại." . "<br>";
+           echo "Sách '{$this->title}' của '{$this->author}' đã được trả." . "<br>";
        }
    }
