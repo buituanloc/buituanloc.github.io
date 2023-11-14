@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="background-color: rgb(116, 178, 239);">
+        <div style="text-align: center;">
+            <h1 style="color: red; font-size: 19px; ">WEATHER INFORMATIONS</h1>
+        </div>
+        <div style="text-align: center;">
+            <input type="text" style="border-radius: 10px; width: 300px; height: 30px; background-color: rgb(115, 130, 194);">
+        </div>
+        <div></div>
+        <div style="background-color: rgb(115, 130, 194); width: 300px; border-radius: 10px; margin-top: 20px; margin-left: 610px;">
+            <div style="display: flex; justify-content: center;">
+                <div>
+                    <i class="fa-solid fa-cloud" style="color: white;"></i>
+                </div>
+                <div style="text-align: center;">
+                    <h2 style="color: white;">Ha Noi,VN</h2>
+                    <h3 style="color: white;">17/3/2023</h3>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <h1 style="color: white;">27 C</h1>
+                <p style="color: white;">Scattered Clouds</p>
+            </div>
+            <div style="display: flex; ">
+                <div style="color: white; margin-left: 10px;">Cảm nhận 28.77</div>
+                <div style="color: white; margin-left: 10px;">Tốc độ gió 5.88Km/h</div>
+            </div>
+            <div style="display: flex;">
+                <div style="color: white;">Độ ẩm 69%</div>
+                <div style="color: white; margin-left: 10px;">Áp lực khí 1004hAp</div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let diadiem = [{
+            id: 1,
+            name: "Hà Nội",
+            lat: 21.016475,
+            lng: 105.852515,
+        }]
+        const OPEN_WEATHER_KEY = '4988a858c20a7f0d9f4fa997d4615023';
+        const OPEN_WEATHER_API = 'https://api.openweathermap.org/data/2.5/weather?';
+
+        function getWeatherInfo(city_id) {
+            const city = {
+                id: 1,
+                lat: 21.016475,
+                lng: 105.852515,
+            }
+            console.log("city")
+            const apiUrl = `${OPEN_WEATHER_API}lat=${city.lat}&lng=${city.lng}&appid=${OPEN_WEATHER_KEY}`;
+            console.log("apiUrl", apiUrl)
+
+            $.ajax({
+                url: apiUrl,
+                method: 'GET',
+                dataType: 'json',
+                success: function(response) {
+                    console.log("response", response);
+                    console.log("nhiệt độ: ", Math.floor(response.main.temp - 273.15));
+                    console.log("Độ ẩm: ", response.main.humidity + "%");
+                    documen.getElementById("weather_temperate").innerText = "Nhiệt độ: " + Math.floor(response)
+
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
